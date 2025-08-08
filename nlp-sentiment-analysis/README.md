@@ -11,12 +11,14 @@ Sentiment Analysis is a natural language processing (NLP) task that aims to iden
 4. Opinion detection in customer feedback
 
 Spark NLP for Sentiment Analysis
-<div style="text-align: justify;">Spark NLP is an open-source NLP library built on top of Apache Spark, developed by John Snow Labs. It enables large-scale natural language processing with high accuracy and scalability, making it suitable for production environments.</div> <br> Spark NLP offers pretrained sentiment analysis models and supports training custom models using deep learning techniques. Leveraging the power of Apache Spark, it allows distributed processing of large datasets, enabling efficient sentiment analysis at scale.
+<div style="text-align: justify;">Spark NLP is an open-source NLP library built on top of Apache Spark, developed by John Snow Labs. It enables large-scale natural language processing with high accuracy and scalability, making it suitable for production environments.</div> <br> 
+Spark NLP offers pretrained sentiment analysis models and supports training custom models using deep learning techniques. Leveraging the power of Apache Spark, it allows distributed processing of large datasets, enabling efficient sentiment analysis at scale.
+
 Key Features of Spark NLP for Sentiment Analysis:
-Pretrained multilingual sentiment analysis models
-1. Integration with Spark ML pipelines for modular workflows
-2. Annotation framework including DocumentAssembler, Tokenizer, Embeddings, and SentimentDLModel
-3. Capability to handle big data with distributed processing using Spark
+1. Pretrained multilingual sentiment analysis models
+2. Integration with Spark ML pipelines for modular workflows
+3. Annotation framework including DocumentAssembler, Tokenizer, Embeddings, and SentimentDLModel
+4. Capability to handle big data with distributed processing using Spark
 
 ## Example
 
@@ -42,5 +44,6 @@ Here the result:
 It will labelling the entity from inserted string. We can combined it as a big dataframe and send the results to data warehouse or etc for production purposes but remember with your platform resources.
 
 __That all, give it a try!__
+
 
 
