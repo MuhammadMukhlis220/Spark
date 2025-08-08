@@ -1,4 +1,4 @@
-# Name Entity Recognition
+# Sentiment Analysis
 ---
 
 __Just simple example for sentiment analysis using pyspark__
@@ -42,4 +42,5 @@ Here the result:
 It will labelling the entity from inserted string. We can combined it as a big dataframe and send the results to data warehouse or etc for production purposes but remember with your platform resources.
 
 __That all, give it a try!__
+
 
