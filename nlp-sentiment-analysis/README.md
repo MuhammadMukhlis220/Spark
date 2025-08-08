@@ -29,7 +29,11 @@ __Pre-requisite__
 
 Take a look in my file [sentiment-analysis-test.py](https://github.com/MuhammadMukhlis220/Spark/blob/main/nlp-sentiment-analysis/sentiment-analysis-test.py), there are some string like "comment" in social media.
 
-Run the file using spark submit `spark-submit --driver-memory 6G --executor-memory 6G --packages com.johnsnowlabs.nlp:spark-nlp_2.12:6.1.0 sentiment-analysis-test.py`. I am using pretrained model, so it will automatically download the model in Amazon Web Service. Don't worry about the credential because we use the default credential from spark-nlp to download the model. We only need download once if we don't have the model. ALl model downloaded will store in our hdfs automatically. My directory is: `/user/mukhwsl/cache_pretrained`. Change mukhwsl by your user name.
+Run the file using spark submit: 
+```
+spark-submit --driver-memory 6G --executor-memory 6G --packages com.johnsnowlabs.nlp:spark-nlp_2.12:6.1.0 sentiment-analysis-test.py
+```
+I am using pretrained model, so it will automatically download the model in Amazon Web Service. Don't worry about the credential because we use the default credential from spark-nlp to download the model. We only need download once if we don't have the model. ALl model downloaded will store in our hdfs automatically. My directory is: `/user/mukhwsl/cache_pretrained`. Change mukhwsl by your user name.
 
 Here the result:
 <br>
@@ -38,3 +42,4 @@ Here the result:
 It will labelling the entity from inserted string. We can combined it as a big dataframe and send the results to data warehouse or etc for production purposes but remember with your platform resources.
 
 __That all, give it a try!__
+
