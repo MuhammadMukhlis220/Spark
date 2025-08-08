@@ -32,15 +32,19 @@ Key Features:
 ## Example
 
 __Pre-requisite__
-1. Ubuntu OS (Use wsl if you using windows)
+1. Linux OS (Use wsl ubuntu if you using windows)
 2. Hadoop cluster
 3. Apache Spark
 4. Python Library (pyspark 3.5.1 and spark-nlp 6.1.0)
 5. Good internet connection (we need download pretrained model)
 
-Take a look in my fie [nlp-spark-test.py](https://github.com/MuhammadMukhlis220/Spark/blob/main/name-entity-recognition/nlp-spark-test.py), i already insert string `Barack Obama was born in Hawaii. While Mukhlis was born in Jakarta, he had a lot fun in Indonesia. They had meeting in Bali after conference in China` in there.
+Take a look in my file [nlp-spark-test.py](https://github.com/MuhammadMukhlis220/Spark/blob/main/name-entity-recognition/nlp-spark-test.py), i already insert string `Barack Obama was born in Hawaii. While Mukhlis was born in Jakarta, he had a lot fun in Indonesia. They had meeting in Bali after conference in China` in there.
 
-Run the file using spark submit `spark-submit --driver-memory 6G --executor-memory 6G --packages com.johnsnowlabs.nlp:spark-nlp_2.12:6.1.0`. I am using pretrained model, so it will automatically download the model in Amazon Web Service. Don't worry about the credential because we use the default credential from spark-nlp to download the model. We only need download once if we don't have the model. ALl model downloaded will store in our hdfs automatically. My directory is: `/user/mukhwsl/cache_pretrained`. Change mukhwsl by your user name.
+Run the file using spark submit: 
+```
+spark-submit --driver-memory 6G --executor-memory 6G --packages com.johnsnowlabs.nlp:spark-nlp_2.12:6.1.0 nlp-spark-test.py
+```
+I am using pretrained model, so it will automatically download the model in Amazon Web Service. Don't worry about the credential because we use the default credential from spark-nlp to download the model. We only need download once if we don't have the model. ALl model downloaded will store in our hdfs automatically. My directory is: `/user/mukhwsl/cache_pretrained`. Change mukhwsl by your user name.
 
 Here the result:
 <br>
