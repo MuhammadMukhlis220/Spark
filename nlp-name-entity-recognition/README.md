@@ -44,7 +44,7 @@ Run the file using spark submit `spark-submit --driver-memory 6G --executor-memo
 
 Here the result:
 <br>
-![Alt Text](https://github.com/MuhammadMukhlis220/Spark/blob/main/name-entity-recognition/pic/result_1.png)
+![Alt Text](https://github.com/MuhammadMukhlis220/Spark/blob/main/nlp-name-entity-recognition/pic/result_1.png)
 
 It will labelling the entity from inserted string. We can combined it as a big dataframe and send the results to data warehouse or etc for production purposes but remember with your platform resources.
 
