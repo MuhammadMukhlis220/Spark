@@ -1,4 +1,4 @@
-# Name Entity Recognition
+# Name Entity Recognition using Spark NLP
 ---
 
 __Just simple example for NER using pyspark__
