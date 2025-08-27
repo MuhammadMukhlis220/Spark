@@ -38,7 +38,7 @@ __Pre-requisite__
 4. Python Library (pyspark 3.5.1 and spark-nlp 6.1.0)
 5. Good internet connection (we need download pretrained model)
 
-Take a look in my file [nlp-spark-test.py](https://github.com/MuhammadMukhlis220/Spark/blob/main/name-entity-recognition/nlp-spark-test.py), i already insert string `Barack Obama was born in Hawaii. While Mukhlis was born in Jakarta, he had a lot fun in Indonesia. They had meeting in Bali after conference in China` in there.
+Take a look in my file [nlp-spark-test.py](https://github.com/MuhammadMukhlis220/Spark/blob/main/nlp-name-entity-recognition/nlp-spark-test.py), i already insert string `Barack Obama was born in Hawaii. While Mukhlis was born in Jakarta, he had a lot fun in Indonesia. They had meeting in Bali after conference in China` in there.
 
 Run the file using spark submit: 
 ```
