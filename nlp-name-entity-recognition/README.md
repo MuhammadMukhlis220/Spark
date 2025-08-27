@@ -44,7 +44,7 @@ Run the file using spark submit:
 ```
 spark-submit --driver-memory 6G --executor-memory 6G --packages com.johnsnowlabs.nlp:spark-nlp_2.12:6.1.0 nlp-spark-test.py
 ```
-I am using pretrained model, so it will automatically download the model in Amazon Web Service. Don't worry about the credential because we use the default credential from spark-nlp to download the model. We only need download once if we don't have the model. ALl model downloaded will store in our hdfs automatically. My directory is: `/user/mukhwsl/cache_pretrained`. Change mukhwsl by your user name.
+I am using pretrained model [glove_100d](https://sparknlp.org/2020/01/22/glove_100d.html), so it will automatically download the model in Amazon Web Service. Don't worry about the credential because we use the default credential from spark-nlp to download the model. We only need download once if we don't have the model. ALl model downloaded will store in our hdfs automatically. My directory is: `/user/mukhwsl/cache_pretrained`. Change mukhwsl by your user name.
 
 Here the result:
 <br>
