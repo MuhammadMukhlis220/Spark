@@ -3,6 +3,8 @@
 
 ![Alt Text](https://github.com/MuhammadMukhlis220/Spark/blob/main/spark-read-write-kudu/pic/kudu.png)
 
+Figure 1
+
 Apache Kudu is storage engine, so we need SQL engine to access Kudu table. One of application that can access Kudu is Apache Spark. Fortunately, Apache Kudu provides an official integration library for Apache Spark, allowing Spark applications to directly read from and write to Kudu tables.
 
 We can access the **Jar** from Maven if we use Spark 3 in [here](https://mvnrepository.com/artifact/org.apache.kudu/kudu-spark3). Choose by pairing your Kudu version. Mine is __1.17.0__ so you can download directly in [here](https://repo1.maven.org/maven2/org/apache/kudu/kudu-spark3_2.12/1.17.0/kudu-spark3_2.12-1.17.0.jar).
@@ -48,11 +50,15 @@ df.printSchema()
 ```
 ![Alt Text](https://github.com/MuhammadMukhlis220/Spark/blob/main/spark-read-write-kudu/pic/code_1.png)
 
+Figure 2
+
 ```python
 %python
 print(" Row:", df.count(),"\n","Column:", len(df.columns))
 ```
 ![Alt Text](https://github.com/MuhammadMukhlis220/Spark/blob/main/spark-read-write-kudu/pic/code_2.png)
+
+Figure 3
 
 ```python
 %python
@@ -60,18 +66,19 @@ df.createOrReplaceTempView("table_kudu")
 spark.sql("SELECT * FROM table_kudu limit 2").show() # Query in here
 ```
 ![Alt Text](https://github.com/MuhammadMukhlis220/Spark/blob/main/spark-read-write-kudu/pic/code_3.png)
+Figure 4
 
 ## Write to Kudu?
 
 It's easy, we just change `read` and `load` to `write` and `save`like other native API from Spark. But we only can use `append` because `overwrite` is not supported.
 
 ```python
-df = spark.sql("SELECT * FROM table_kudu limit 2")
+df_write = spark.sql("SELECT * FROM table_kudu limit 2")
 
 kudu_master = "100.100.100.11:7051" # your kudu master IP or FQDN
 kudu_table = "impala::default.big_data"
 
-df_cast.write \
+df_write.write \
   .format("kudu") \
   .option("kudu.master", kudu_master) \
   .option("kudu.table", kudu_table) \
