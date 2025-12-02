@@ -186,6 +186,10 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 kafka_t
 
 Ahh, don't forget to install [opensearchpy](https://pypi.org/project/opensearch-py/) library.
 
+__RESULT STREAMING__:
+
+https://github.com/user-attachments/assets/15d079be-c6f9-485e-b44d-235af71b21c3
+
 ### 4. Opensearch Configuration for Alert
 
 We can run the spark file without error even we not make the index `sensor_logs`. But if you want implement in production, you need build the index manually to configure the data type mapping, replica and shard. After sent to Opensearch, we can go to __Alerting__ menu in __OpenSearch Plugins__'s section. Because i already make the alert monitor, my figure will show __edit__ the alerting monitor.
